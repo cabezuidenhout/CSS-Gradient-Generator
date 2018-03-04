@@ -5,7 +5,7 @@ const randDirButton = document.querySelector('#randomDirButton');
 const cssField = document.querySelector("#cssGenerated");
 
 const getColorVal = () => Math.floor(Math.random()*256);
-const getRandomColor = () => `rgb(${getColorVal()},${getColorVal()},${getColorVal()})`;
+const getRandomColor = () => `rgba(${getColorVal()},${getColorVal()},${getColorVal()},${Math.random()})`;
 const getColorsFromGradient = (gradient) =>  gradient.colors.reduce( (a,c) => {
     return a += `,${c}`;
 },"");
